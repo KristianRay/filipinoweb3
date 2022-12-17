@@ -37,7 +37,7 @@
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
-  --container-width-md: 94%;
+  --container-width-sm: 94%;
 
   --transition: all 400ms ease;
 }
@@ -525,4 +525,261 @@ textarea {
   width: max-content;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+/* ===== MEDIA QUERIES TABLETS ====== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+  /* ===== NAV BAR ====== */
+
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  nav button#close-menu-btn {
+    display: none;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+  }
+
+  .nav__menu li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+  .nav__menu li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+  .nav__menu li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+
+  @keyframes animateNavItems {
+    0% {
+      transform: rotateZ(-90deg) rotateX(-90deg) scale(0.1);
+    }
+
+    100% {
+      transform: rotateZ(0) rotateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  .nav__menu li a {
+    background-color: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .nav__menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+  }
+
+  /* ===== HEADER ====== */
+  header {
+    height: 70vh;
+    margin-bottom: 4rem;
+  }
+
+  .header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  .categories {
+    height: auto;
+  }
+
+  .categories__container {
+    gap: 3rem;
+  }
+  .categories__left {
+    margin-right: 0;
+  }
+
+  .values {
+    margin-top: 0;
+  }
+
+  .values__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .faqs__container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq {
+    padding: 1.5rem;
+  }
+
+  /* .footer__container {
+    grid-template-columns: 1fr 1fr;
+  } */
+
+  .team__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team__member {
+    padding: 1rem;
+  }
+
+  .contact {
+    /* padding-bottom: 0; */
+  }
+  .contact__container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact__aside {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  .contact__form {
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+
+/* ===== MEDIA QUERIES PHONES ====== */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  .nav__menu {
+    right: 3%;
+  }
+
+  header {
+    height: 120vh;
+  }
+
+  .header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 0;
+  }
+  .header__left p {
+    margin-bottom: 1.3rem;
+  }
+
+  .categories__container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+  .categories__right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .category {
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .category__icon {
+    margin-top: 4px;
+    display: inline-block;
+  }
+
+  .values__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer_1 p {
+    margin: 1rem auto;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .team__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .team__member {
+    padding: 0;
+  }
+
+  .team__member p {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .contact__form {
+    margin: 0 1.5rem 3rem;
+  }
+
+  .form__name {
+    flex-direction: column;
+  }
+
+  .form__name input[type="text"] {
+    width: 100%;
+  }
 }
