@@ -391,9 +391,20 @@ footer ul li a:hover {
   border-radius: 0;
 }
 
-.team__member-image img {
-  filter: saturate(0);
-  border-radius: 1rem;
+.team__member-image {
+  position: relative;
+  display: inline-block;
+}
+
+.team__member-image .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.team__member-image:hover .img-top {
+  display: inline;
   height: fit-content;
 }
 
@@ -421,6 +432,7 @@ footer ul li a:hover {
   border-radius: 1rem 0 0 1rem;
   box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
   transition: var(--transition);
+  z-index: 99;
 }
 
 .team__member-socials a {
