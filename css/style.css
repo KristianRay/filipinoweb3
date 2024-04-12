@@ -11,7 +11,7 @@
 :root {
   /* PRIMARY 1 */
 
-  --color-primary: #2682dd;
+  --color-primary: #2c3892;
 
   /* PRIMARY 2 */
 
@@ -95,6 +95,10 @@ img {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.green {
+  color: #055709;
 }
 
 .btn {
