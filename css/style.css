@@ -381,7 +381,7 @@ footer ul li a:hover {
   justify-content: center;
 }
 
-.team__container article {
+.team__container .core {
   flex: 0 0 23%;
 }
 
@@ -403,7 +403,7 @@ footer ul li a:hover {
 }
 
 .fMember article{
-  flex: 0 0 18%
+  flex: 0 0 20%
 }
 
 .team__member:hover {
@@ -693,7 +693,7 @@ textarea {
     gap: 1.5rem;
   }
 
-  .team__container article {
+  .team__container .core {
     flex: 0 0 45%;
     gap: 1.5rem;
   }
@@ -747,6 +747,10 @@ textarea {
   .contact__form {
     align-self: center;
     margin-right: 1.5rem;
+  }
+
+  .fMember article{
+    flex: 0 0 30% !important;
   }
 }
 
@@ -813,10 +817,10 @@ textarea {
   }
 
   .team__container {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
-  .team__container article {
+  .team__container .core {
     flex: 0 0 47%;
   }
 
@@ -860,8 +864,17 @@ textarea {
 }
 
 @media screen and (max-width: 500px) {
-  .team__container article{
+  .team__container .core{
     flex: 0 0 46%;
+  }
+
+  .team__member-info h4{
+    margin-top: 0;
+    padding: 1rem 0;
+  }
+
+  .fMember article{
+    flex: 0 0 30% !important;
   }
 
   .footer__container {
