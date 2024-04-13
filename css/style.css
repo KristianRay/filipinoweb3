@@ -402,6 +402,10 @@ footer ul li a:hover {
   max-width: 25rem;
 }
 
+.fMember article{
+  flex: 0 0 18%
+}
+
 .team__member:hover {
   background: transparent;
   border-radius: 0;
