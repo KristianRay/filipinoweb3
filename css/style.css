@@ -187,7 +187,6 @@ header {
 /* ===== CATEGORIES ====== */
 .categories {
   background: var(--color-bg1);
-  height: 29rem;
 }
 
 .categories h1 {
@@ -196,8 +195,8 @@ header {
 }
 
 .categories__container {
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .categories__left p {
@@ -376,9 +375,21 @@ footer ul li a:hover {
 }
 
 .team__container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
+}
+
+.team__container article {
+  flex: 0 0 23%;
+}
+
+.fMember__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
 }
 
 .team__member {
@@ -388,6 +399,7 @@ footer ul li a:hover {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  max-width: 25rem;
 }
 
 .team__member:hover {
@@ -539,7 +551,6 @@ textarea {
 
 .contact__form .btn {
   width: max-content;
-  margin-top: 1rem;
   cursor: pointer;
 }
 
@@ -675,8 +686,38 @@ textarea {
   } */
 
   .team__container {
+    gap: 1.5rem;
+  }
+
+  .team__container article {
+    flex: 0 0 45%;
+    gap: 1.5rem;
+  }
+
+  .fMember__container {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+  }
+
+  .categories__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .categories__right {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  .categories__right .category {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .categories__right .category p {
+    font-size: 1rem;
   }
 
   .team__member {
@@ -768,6 +809,14 @@ textarea {
   }
 
   .team__container {
+    gap: 1.5rem;
+  }
+
+  .team__container article {
+    flex: 0 0 47%;
+  }
+
+  .fMember__container {
     grid-template-columns: 1fr 1fr;
     gap: 0.7rem;
   }
@@ -797,5 +846,21 @@ textarea {
 
   .form__name input[type="text"] {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .team__container article{
+    flex: 0 0 46%;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
