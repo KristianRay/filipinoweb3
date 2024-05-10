@@ -227,7 +227,7 @@ header {
 }
 
 .category:nth-child(1) .category__icon {
-  background: var(--color-success);
+  background: var(--color-primary);
 }
 
 .category:nth-child(2) .category__icon {
