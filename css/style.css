@@ -11,7 +11,7 @@
 :root {
   /* PRIMARY 1 */
 
-  --color-primary: #2c3892;
+  --color-primary: #055709;
 
   /* PRIMARY 2 */
 
@@ -394,7 +394,7 @@ footer ul li a:hover {
 
 .team__member {
   background: var(--color-bg2);
-  padding: 2rem;
+  padding: 0.8rem;
   border: 1px solid transparent;
   transition: var(--transition);
   position: relative;
@@ -403,7 +403,7 @@ footer ul li a:hover {
 }
 
 .fMember article{
-  flex: 0 0 20%
+  flex: 0 0 14%
 }
 
 .team__member:hover {
@@ -434,7 +434,7 @@ footer ul li a:hover {
 
 .team__member-info * {
   text-align: center;
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
 }
 
 .team__member-info p {
